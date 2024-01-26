@@ -50,3 +50,9 @@ console.log(player);
 
 player.points = player.points + 15;
 console.log(player.points);
+
+//function
+function sayHello() {
+  console.log("hello!");
+}
+sayHello();
