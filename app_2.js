@@ -52,7 +52,29 @@ player.points = player.points + 15;
 console.log(player.points);
 
 //function
-function sayHello() {
-  console.log("hello!");
+function sayHello(nameOfPerson, age) {
+  console.log("hello my name is " + nameOfPerson + " and I am " + age);
 }
-sayHello();
+sayHello("nico", 10);
+sayHello("dal", 20);
+
+function plus(a, b) {
+  console.log(a + b);
+}
+
+plus(8, 60);
+
+function divide(a, b) {
+  console.log(a / b);
+}
+divide(98, 20);
+
+const playerr = {
+  name: "nico",
+  sayHello: function (otherPersonName) {
+    console.log("hello " + otherPersonName + " nice to meet you");
+  },
+};
+
+playerr.sayHello("psy");
+playerr.sayHello("young");
