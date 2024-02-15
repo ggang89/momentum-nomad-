@@ -5,8 +5,9 @@ const toDoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
 
-const toDos = [];
+let toDos = [];
 //todo를 작성해서 넣은 배열
+//내용이 계속 업데이트 되므로 let으로 바꿔준다
 
 function saveToDos() {
   //localStorage에 todo를 저장해준다
@@ -54,6 +55,7 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   //JSON.parse= javascript object로 만들어준다
-  parsedToDos.forEach((item) => console.log("this is the turn of ", item));
+  toDos = parsedToDos;
+  parsedToDos.forEach(paintToDo);
   //parsedToDos가 가진 각각의 item의 함수를 실행할 때 -> forEach
 }
