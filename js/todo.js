@@ -24,8 +24,9 @@ function deleteToDo(event) {
 
 function paintToDo(newTodo) {
   const li = document.createElement("li");
+  li.id = newTodo.id;
   const span = document.createElement("span");
-  span.innerText = newTodo;
+  span.innerText = newTodo.text;
   const button = document.createElement("button");
   button.innerText = "❌";
   button.addEventListener("click", deleteToDo);
@@ -41,10 +42,15 @@ function handleToDoSubmit(event) {
   event.preventDefault();
   const newTodo = toDoInput.value;
   toDoInput.value = "";
-  toDos.push(newTodo);
-  //nexTodo를 toDos배열에 넣는다
-  paintToDo(newTodo);
-  //화면에 nexTodo를 그려준다
+  const newTodoObj ={
+    text :newTodo,
+    id :Date.now(),
+  }//todo를 객체로 만들어줌=>각자의 id를 가지게 하기 위해서
+
+  toDos.push(newTodoObj);
+  //nexTodo를 toDos배열에 넣는다=>배열이 아닌 객체로 바꿔줌
+  paintToDo(newTodoObj);
+  //화면에 nexTodo객체를 그려준다
   saveToDos();
 }
 
