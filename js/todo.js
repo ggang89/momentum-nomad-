@@ -18,6 +18,7 @@ function saveToDos() {
 function deleteToDo(event) {
   const li = event.target.parentElement;
   //변수 li는 event가 발생한 target의 부모요소
+  toDos = toDos.filter((todo)=>todo.id !== parseInt(li.id));
   li.remove();
   //변수 li를 제거한다
 }
@@ -65,3 +66,4 @@ if (savedToDos !== null) {
   parsedToDos.forEach(paintToDo);
   //parsedToDos가 가진 각각의 item의 함수를 실행할 때 -> forEach
 }
+//filter함수 : true인 것만 출력한다
