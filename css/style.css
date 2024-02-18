@@ -1,3 +1,29 @@
 .hidden {
   display: none;
 }
+.inputBox {
+  width: 50%;
+  height: 30px;
+  align-items: center;
+}
+#clock {
+  text-align: center;
+  font-weight: 800;
+  font-size: 70px;
+}
+#greeting {
+  text-align: center;
+}
+#todo-form {
+  align-items: center;
+}
+.formBox {
+  text-align: center;
+  background-color: antiquewhite;
+}
+ul,
+li {
+  list-style: none;
+  font-size: 17px;
+  font-style: italic;
+}

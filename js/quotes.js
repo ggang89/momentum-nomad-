@@ -53,3 +53,7 @@ const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerHTML = todaysQuote.quote;
 author.innerHTML = todaysQuote.author;
+
+// 스타일주기
+quote.style.font = "30px bolder ";
+author.style.font = "20px bold gray";
